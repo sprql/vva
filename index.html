@@ -2,10 +2,16 @@
 layout: default
 ---
 
-<h2>Faces</h2>
-<p><small>/2017/</small></p>
-<p>There are different people with different mood and hairstyles. </p>
-{% for picture in site.data.galleries.faces.pictures %}
-    <a href="/assets/galleries/faces/{{ picture }}" class="picture-preview" style="background-image: url('/assets/galleries/faces/thumbs/{{ picture }}')">
-    </a>
-{% endfor %}
+<div class="gallery">
+    <h2>Faces</h2>
+    <p><small>/2017/</small></p>
+    <p>There are different people with different mood and hairstyles. </p>
+    <ul class="gallery-preview">
+        {% for picture in site.data.galleries.faces.pictures %}
+            <li class="gallery-preview-item">
+                <a href="/assets/galleries/faces/{{ picture }}" class="picture-preview" style="background-image: url('/assets/galleries/faces/thumbs/{{ picture }}')">
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
